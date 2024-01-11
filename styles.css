@@ -13,12 +13,6 @@ body {
   display: none;
 }
 
-#content-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 h1,
 h5 {
   font-family: "Open Sans", sans-serif;
@@ -29,20 +23,29 @@ h5 {
   margin-top: 16px;
 }
 
+#content-wrapper,
 #nav-wrapper,
 #intro,
 #project-section-wrapper,
-.project-name-wrapper {
+.project-name-wrapper,
+#footer-contents {
   display: flex;
+}
+
+#content-wrapper,
+#nav-wrapper,
+#intro,
+#project-section-wrapper {
+  flex-direction: column;
 }
 
 #nav-wrapper,
 #intro,
 #project-section-wrapper {
-  flex-direction: column;
   max-width: 90%;
 }
 
+#content-wrapper,
 #nav-wrapper,
 #intro {
   align-items: center;
@@ -58,7 +61,7 @@ h5 {
   margin-bottom: 24px;
 }
 
-img {
+#profile-pic {
   max-width: 70%;
   height: auto;
   border-radius: 8px;
@@ -123,5 +126,42 @@ h3 {
 }
 
 .feature {
+  margin-left: 16px;
+}
+
+#contact-button {
+  padding: 8px 16px;
+  background-color: #f71735;
+  color: #f8f1ff;
+  font-size: 16px;
+  border-radius: 8px;
+  border: none;
+  margin-bottom: 48px;
+}
+
+#footer-wrapper {
+  width: 100%;
+}
+footer {
+  height: 96px;
+  background-color: #020202;
+}
+
+#footer-contents {
+  height: 100%;
+  margin: auto 10%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h5 {
+  font-size: 16px;
+}
+
+#socials {
+  /* background-color:#20bf55; */
+}
+
+.social-link {
   margin-left: 16px;
 }
