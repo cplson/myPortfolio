@@ -6,6 +6,7 @@
 body {
   background-color: #534d56;
   color: #f8f1ff;
+  font-family: "Share", sans-serif;
 }
 
 #navigation {
@@ -17,24 +18,54 @@ body {
   flex-direction: column;
   align-items: center;
 }
-#nav-wrapper,
-#intro {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-#nav-wrapper {
-  margin-top: 24px;
-}
-
-img {
-  max-width: 90%;
-  height: auto;
-}
 
 h1,
 h5 {
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
+}
+
+#nav-wrapper {
+  margin-top: 16px;
+}
+
+#nav-wrapper,
+#intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 90%;
+}
+
+#intro {
+  margin-top: 32px;
+}
+
+#intro-p {
+  /* max-width: 90%; */
+  font-size: 24px;
+  margin-bottom: 24px;
+}
+
+img {
+  max-width: 70%;
+  height: auto;
+  border-radius: 8px;
+}
+
+#james-mobile {
+  margin-top: 32px;
+  margin-bottom: 16px;
+}
+
+.highlight-text {
+  color: #20bf55;
+}
+
+#divider {
+  width: 70%;
+  margin: 32px auto;
+  height: 2px;
+  background-color: #f71735;
+  border: none;
 }
