@@ -62,7 +62,8 @@ h5 {
 }
 
 #profile-pic {
-  max-width: 70%;
+  width: 70%;
+  max-width: 280px;
   height: auto;
   border-radius: 8px;
 }
@@ -107,6 +108,9 @@ h2 {
   margin-bottom: 16px;
 }
 
+#projects-title {
+  white-space: nowrap;
+}
 h3,
 h4 {
   /* background-color: #20bf55; */
@@ -130,6 +134,7 @@ h3 {
 }
 
 #contact-button {
+  width: fit-content;
   padding: 8px 16px;
   background-color: #f71735;
   color: #f8f1ff;
@@ -137,6 +142,86 @@ h3 {
   border-radius: 8px;
   border: none;
   margin-bottom: 48px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+  display: none;
+}
+
+#contact-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#contact-form {
+  width: 90%;
+  background-color: #20bf55;
+  padding: 24px 0px;
+  margin-bottom: 48px;
+  display: flex;
+  justify-content: center;
+  border-radius: 12px;
+  border-style: solid;
+  border-color: rgba(0, 100, 0, 0.8);
+  border-width: 1px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+  font-family: "Open Sans", sans-serif;
+}
+#form-contents {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group {
+  margin: 5px 0px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact-form-input {
+  box-sizing: border-box;
+  margin-left: 15px;
+  padding-left: 8px;
+  background-color: rgb(230, 250, 230);
+  border: solid;
+  border-radius: 8px;
+  border-color: rgba(0, 0, 0, 0.5);
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+}
+
+.contact-form-input:focus {
+  /* outline: rgba(247, 23, 53, 1); */
+  outline: none;
+  border-color: rgba(247, 23, 53, 0.7);
+}
+
+#form-textarea {
+  height: 120px;
+  max-height: 160px;
+  resize: vertical;
+}
+
+.contact-form-label {
+  color: #f8f1ff;
+  font-size: 20px;
+  margin-left: auto;
+}
+
+#submit-button {
+  width: fit-content;
+  align-self: end;
+  font-size: 20px;
+  padding: 4px 12px;
+  margin-top: 16px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #f8f1ff;
+  border-radius: 4px;
+  border: none;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+#submit-button:active {
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 #footer-wrapper {

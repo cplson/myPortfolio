@@ -19,6 +19,13 @@ window.addEventListener("DOMContentLoaded", async () => {
             console.log("FAILED...", error);
           }
         );
+        let name = document.getElementsByName("user_name");
+        let email = document.getElementsByName("user_email");
+        let message = document.getElementsByName("message");
+
+        name[0].value = "";
+        email[0].value = "";
+        message[0].value = "";
       });
   };
 });
