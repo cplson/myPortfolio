@@ -211,11 +211,11 @@ h5 {
     max-width: 480px;
   }
 
-  #project-section-wrapper{
+  #project-section-wrapper {
     width: 90%;
   }
 
-  #project-section-header{
+  #project-section-header {
     width: 20%;
     display: flex;
     align-items: end;
@@ -223,63 +223,84 @@ h5 {
     /* background-color: #020202; */
     margin-bottom: 32px;
   }
-  h2{
+  h2 {
     font-size: 32px;
   }
-  .project-wrapper{
+  .project-wrapper {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     /* background-color: #020202; */
   }
-  .project-name-wrapper{
+  .project-name-wrapper {
     flex-direction: column-reverse;
     align-items: end;
     justify-content: start;
     width: 20%;
     /* background-color: #f71735; */
   }
-  h3{
+  h3 {
     font-size: 24px;
   }
-  .project-details-wrapper{
+  .project-details-wrapper {
     width: 60%;
     font-size: 20px;
   }
-  #balancer{
+  #balancer {
     width: 100%;
     display: flex;
     justify-content: space-around;
     /* background-color:#20bf55; */
   }
-  #projects-title{
+  #projects-title {
     align-self: end;
     font-size: 28px;
     /* background-color: #020202; */
   }
-#empty{
+  #empty {
     width: 60%;
     /* background-color: #f71735; */
-}
+  }
 
-#project-divider{
+  #project-divider {
     display: inline;
     width: 60%;
     background-color: #f8f1ff;
     border: none;
     height: 1px;
-}
- 
-#contact-button{
+  }
+
+  #contact-button {
     margin: 40px auto 106px;
     border-radius: 2px;
     font-size: 24px;
     border-color: #f8f1ff;
-}
-footer{
+  }
+  footer {
     height: 240px;
-}
-h5{
+  }
+  h5 {
     font-size: 24px;
+  }
 }
+
+@media (min-width: 1220px) {
+  #intro {
+    max-width: 960px;
+  }
+  #project-section-wrapper{
+    max-width: 960px;
+  }
+  #footer-contents {
+    margin: auto;
+    max-width: 960px;
+    justify-content: space-around;
+  }
+
+}
+
+@media(min-width: 1600px){
+    #navigation{
+        max-width: 1440px;
+    }
 }
