@@ -161,7 +161,10 @@ h5 {
 #socials {
   /* background-color:#20bf55; */
 }
-
+.linkedin {
+  height: 24px;
+  width: 24px;
+}
 .social-link {
   margin-left: 16px;
 }
@@ -288,7 +291,7 @@ h5 {
   #intro {
     max-width: 960px;
   }
-  #project-section-wrapper{
+  #project-section-wrapper {
     max-width: 960px;
   }
   #footer-contents {
@@ -296,11 +299,10 @@ h5 {
     max-width: 960px;
     justify-content: space-around;
   }
-
 }
 
-@media(min-width: 1600px){
-    #navigation{
-        max-width: 1440px;
-    }
+@media (min-width: 1600px) {
+  #navigation {
+    max-width: 1440px;
+  }
 }
