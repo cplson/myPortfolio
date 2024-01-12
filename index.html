@@ -24,6 +24,7 @@
     <script
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+      defer
     ></script>
     <script src="app.js" defer type="module"></script>
   </head>
@@ -125,21 +126,31 @@
         <form id="contact-form">
           <div id="form-contents">
             <input type="hidden" name="contact_number" />
-            <div class="input-group">
-              <label class="contact-form-label">Name</label>
-              <input class="contact-form-input" type="text" name="user_name" />
+            <div id="contact-group">
+              <div class="input-group">
+                <label class="contact-form-label">Name</label>
+                <input
+                  class="contact-form-input"
+                  type="text"
+                  name="user_name"
+                />
+              </div>
+              <div class="input-group">
+                <label class="contact-form-label">Email</label>
+                <input
+                  class="contact-form-input"
+                  type="email"
+                  name="user_email"
+                />
+              </div>
             </div>
-            <div class="input-group">
-              <label class="contact-form-label">Email</label>
-              <input
-                class="contact-form-input"
-                type="email"
-                name="user_email"
-              />
-            </div>
-            <div class="input-group">
+            <div id="message-group" class="input-group">
               <label class="contact-form-label">Message</label>
-              <textarea class="contact-form-input" id="form-textarea" name="message"></textarea>
+              <textarea
+                class="contact-form-input"
+                id="form-textarea"
+                name="message"
+              ></textarea>
             </div>
             <input id="submit-button" type="submit" value="Send" />
           </div>
