@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>James Jacobsen</title>
+
     <!-- STYLES -->
     <link rel="stylesheet" href="styles.css" />
     <!-- FONTS -->
@@ -19,6 +20,12 @@
       href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;500;700&family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&family=Share:ital,wght@0,400;0,700;1,400&display=swap"
       rel="stylesheet"
     />
+    <!-- SCRIPTS -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script src="app.js" defer type="module"></script>
   </head>
   <!-- BODY -->
   <body>
@@ -114,6 +121,17 @@
 
       <div id="contact-wrapper">
         <button id="contact-button">Contact Me</button>
+
+        <form id="contact-form">
+          <input type="hidden" name="contact_number" />
+          <label>Name</label>
+          <input type="text" name="user_name" />
+          <label>Email</label>
+          <input type="email" name="user_email" />
+          <label>Message</label>
+          <textarea name="message"></textarea>
+          <input type="submit" value="Send" />
+        </form>
       </div>
 
       <div id="footer-wrapper">
