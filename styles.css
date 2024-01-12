@@ -270,4 +270,16 @@ h5 {
     height: 1px;
 }
  
+#contact-button{
+    margin: 40px auto 106px;
+    border-radius: 2px;
+    font-size: 24px;
+    border-color: #f8f1ff;
+}
+footer{
+    height: 240px;
+}
+h5{
+    font-size: 24px;
+}
 }
