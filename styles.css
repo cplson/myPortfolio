@@ -161,7 +161,148 @@ h5 {
 #socials {
   /* background-color:#20bf55; */
 }
-
+.linkedin {
+  height: 24px;
+  width: 24px;
+}
 .social-link {
   margin-left: 16px;
+}
+
+@media (min-width: 440px) {
+  #intro {
+    width: 90%;
+    max-width: 460px;
+  }
+
+  #divider {
+    max-width: 360px;
+  }
+}
+
+@media (min-width: 880px) {
+  #nav-wrapper {
+    /* max-width: 100%; */
+    width: 100%;
+  }
+  #navigation {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 16px;
+  }
+
+  #james-mobile {
+    display: none;
+  }
+  #intro {
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    max-width: 1660px;
+  }
+  #profile-pic {
+    max-width: 340px;
+  }
+
+  #intro-p {
+    width: 40%;
+    font-size: 28px;
+  }
+
+  #divider {
+    margin: 64px 0px;
+    max-width: 480px;
+  }
+
+  #project-section-wrapper {
+    width: 90%;
+  }
+
+  #project-section-header {
+    width: 20%;
+    display: flex;
+    align-items: end;
+    flex-direction: column;
+    /* background-color: #020202; */
+    margin-bottom: 32px;
+  }
+  h2 {
+    font-size: 32px;
+  }
+  .project-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    /* background-color: #020202; */
+  }
+  .project-name-wrapper {
+    flex-direction: column-reverse;
+    align-items: end;
+    justify-content: start;
+    width: 20%;
+    /* background-color: #f71735; */
+  }
+  h3 {
+    font-size: 24px;
+  }
+  .project-details-wrapper {
+    width: 60%;
+    font-size: 20px;
+  }
+  #balancer {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    /* background-color:#20bf55; */
+  }
+  #projects-title {
+    align-self: end;
+    font-size: 28px;
+    /* background-color: #020202; */
+  }
+  #empty {
+    width: 60%;
+    /* background-color: #f71735; */
+  }
+
+  #project-divider {
+    display: inline;
+    width: 60%;
+    background-color: #f8f1ff;
+    border: none;
+    height: 1px;
+  }
+
+  #contact-button {
+    margin: 40px auto 106px;
+    border-radius: 2px;
+    font-size: 24px;
+    border-color: #f8f1ff;
+  }
+  footer {
+    height: 240px;
+  }
+  h5 {
+    font-size: 24px;
+  }
+}
+
+@media (min-width: 1220px) {
+  #intro {
+    max-width: 960px;
+  }
+  #project-section-wrapper {
+    max-width: 960px;
+  }
+  #footer-contents {
+    margin: auto;
+    max-width: 960px;
+    justify-content: space-around;
+  }
+}
+
+@media (min-width: 1600px) {
+  #navigation {
+    max-width: 1440px;
+  }
 }
