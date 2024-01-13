@@ -45,10 +45,6 @@ const displayContactForm = () => {
   document.getElementById("contact-form").style.display = "block";
 };
 
-// const toastFadeout = () => {
-//     let toast = document.getElement
-// }
-
 const loadToastSuccess = () => {
   let template = document.getElementById("toast-success-template");
   let content = template.content.cloneNode(true);
