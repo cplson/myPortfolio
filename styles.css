@@ -147,6 +147,7 @@ h3 {
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
 }
 #contact-form {
   width: 90%;
@@ -425,4 +426,3 @@ h5 {
     max-width: 1440px;
   }
 }
-

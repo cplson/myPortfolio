@@ -14,24 +14,21 @@ window.addEventListener("DOMContentLoaded", async () => {
         this.contact_number.value = (Math.random() * 100000) | 0;
         // these IDs from the previous steps
 
-        // emailjs.sendForm("contact_service", "contact_form", this).then(
-        //   function () {
-        //     console.log("SUCCESS!");
-        //   },
-        //   function (error) {
-        //     console.log("FAILED...", error);
-        //   }
-        // );
-
-        document.getElementById("contact-form").style.display = "none";
-        document.getElementById("contact-button").style.display = "block";
-
-        loadToastSuccess();
-        // loadToastFail();
-
         let name = document.getElementsByName("user_name");
         let email = document.getElementsByName("user_email");
         let message = document.getElementsByName("message");
+
+        emailjs.sendForm("contact_service", "contact_form", this).then(
+          function () {
+            loadToastSuccess();
+          },
+          function (error) {
+            loadToastFail();
+          }
+        );
+
+        document.getElementById("contact-form").style.display = "none";
+        document.getElementById("contact-button").style.display = "block";
 
         name[0].value = "";
         email[0].value = "";

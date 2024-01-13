@@ -138,6 +138,7 @@
               <div class="input-group">
                 <label class="contact-form-label">Email</label>
                 <input
+                  required
                   class="contact-form-input"
                   type="email"
                   name="user_email"
@@ -147,6 +148,7 @@
             <div id="message-group" class="input-group">
               <label class="contact-form-label">Message</label>
               <textarea
+                required
                 class="contact-form-input"
                 id="form-textarea"
                 name="message"
@@ -176,16 +178,20 @@
       </div>
     </div>
     <template id="toast-success-template">
-      <div class='toast' id="toast-success">
+      <div class="toast" id="toast-success">
         <img class="toast-icon" src="data/images/check.svg" alt="check" />
         <p class="toast-message">Message Sent!</p>
       </div>
     </template>
     <template id="toast-fail-template">
-        <div class='toast' id="toast-fail">
-          <img class="toast-icon" src="data/images/alert-circle.svg" alt="alert" />
-          <p class="toast-message">Unsent Error</p>
-        </div>
-      </template>
+      <div class="toast" id="toast-fail">
+        <img
+          class="toast-icon"
+          src="data/images/alert-circle.svg"
+          alt="alert"
+        />
+        <p class="toast-message">Unsent Error</p>
+      </div>
+    </template>
   </body>
 </html>
