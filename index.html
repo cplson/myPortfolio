@@ -7,6 +7,7 @@
 
     <!-- STYLES -->
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="./components/toast.css" />
     <!-- FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -174,5 +175,17 @@
         </footer>
       </div>
     </div>
+    <template id="toast-success-template">
+      <div class='toast' id="toast-success">
+        <img class="toast-icon" src="data/images/check.svg" alt="check" />
+        <p class="toast-message">Message Sent!</p>
+      </div>
+    </template>
+    <template id="toast-fail-template">
+        <div class='toast' id="toast-fail">
+          <img class="toast-icon" src="data/images/alert-circle.svg" alt="alert" />
+          <p class="toast-message">Unsent Error</p>
+        </div>
+      </template>
   </body>
 </html>
