@@ -20,10 +20,10 @@ window.addEventListener("DOMContentLoaded", async () => {
 
         emailjs.sendForm("contact_service", "contact_form", this).then(
           function () {
-            loadToastSuccess();
+            showToastSuccess();
           },
           function (error) {
-            loadToastFail();
+            showToastFail();
           }
         );
 
@@ -43,6 +43,8 @@ window.addEventListener("DOMContentLoaded", async () => {
 const displayContactForm = () => {
   document.getElementById("contact-button").style.display = "none";
   document.getElementById("contact-form").style.display = "block";
+  loadToastSuccess();
+  loadToastFail();
 };
 
 const loadToastSuccess = () => {
@@ -50,14 +52,6 @@ const loadToastSuccess = () => {
   let content = template.content.cloneNode(true);
   let container = document.getElementById("contact-wrapper");
   container.appendChild(content);
-
-  let toast = document.getElementById("toast-success");
-  setTimeout(() => {
-    toast.classList.add("fadeOut");
-    toast.addEventListener("transitionend", () => {
-      container.removeChild(toast);
-    });
-  }, 3000);
 };
 
 const loadToastFail = () => {
@@ -65,12 +59,28 @@ const loadToastFail = () => {
   let content = template.content.cloneNode(true);
   let container = document.getElementById("contact-wrapper");
   container.appendChild(content);
+};
 
-  let toast = document.getElementById("toast-fail");
+const showToastSuccess = () => {
+  let container = document.getElementById("contact-wrapper");
+  let toast = document.getElementById("toast-success");
+  toast.style.right = "8px";
   setTimeout(() => {
-    toast.classList.add("fadeOut");
-    toast.addEventListener("transitionend", () => {
+    toast.style.opacity = "0";
+    setTimeout(() => {
       container.removeChild(toast);
-    });
+    }, 1600);
+  }, 3000);
+};
+
+const showToastFail = () => {
+  let container = document.getElementById("contact-wrapper");
+  let toast = document.getElementById("toast-fail");
+  toast.style.right = "8px";
+  setTimeout(() => {
+    toast.style.opacity = "0";
+    setTimeout(() => {
+      container.removeChild(toast);
+    }, 1600);
   }, 3000);
 };
