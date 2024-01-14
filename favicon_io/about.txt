@@ -1,0 +1,6 @@
+This favicon was generated using the following font:
+
+- Font Title: Share
+- Font Author: Copyright (c) 2005-2011, Carrois Type Design (carrois.com), with Reserved Font Name "Share"
+- Font Source: http://fonts.gstatic.com/s/share/v18/i7dEIFliZjKNF5VNHLq2cV5d.ttf
+- Font License: SIL Open Font License, 1.1 (http://scripts.sil.org/OFL))
