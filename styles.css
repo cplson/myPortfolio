@@ -373,7 +373,9 @@ h5 {
   .project-wrapper {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
+    max-width: 1000px;
+    /* background-color: #020202; */
   }
   .project-name-wrapper {
     flex-direction: column-reverse;
