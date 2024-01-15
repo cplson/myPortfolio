@@ -28,7 +28,8 @@ window.addEventListener("DOMContentLoaded", async () => {
           }
         );
 
-        document.getElementById("contact-form").style.display = "none";
+        document.getElementById("contact-form").style.height = "0px";
+        document.getElementById("contact-form").style.opacity = "0";
         document.getElementById("contact-button").style.display = "block";
 
         name[0].value = "";
@@ -46,10 +47,10 @@ window.addEventListener("DOMContentLoaded", async () => {
 
 const displayContactForm = () => {
   document.getElementById("contact-button").style.display = "none";
-  document.getElementById("contact-form").style.display = "block";
+  document.getElementById("contact-form").style.height = "auto";
   document.getElementById("contact-form").style.opacity = "1";
-  //   loadToastSuccess();
-  //   loadToastFail();
+  loadToastSuccess();
+  loadToastFail();
 };
 
 const loadToastSuccess = () => {
@@ -67,7 +68,6 @@ const loadToastFail = () => {
 };
 
 const showToastSuccess = () => {
-  loadToastSuccess();
   let container = document.getElementById("contact-wrapper");
   let toast = document.getElementById("toast-success");
   toast.style.right = "8px";
@@ -80,7 +80,6 @@ const showToastSuccess = () => {
 };
 
 const showToastFail = () => {
-  loadToastFail();
   let container = document.getElementById("contact-wrapper");
   let toast = document.getElementById("toast-fail");
   toast.style.right = "8px";

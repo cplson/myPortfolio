@@ -150,10 +150,15 @@ h3 {
   position: relative;
 }
 #contact-form {
+  height: 0;
+  /* height: auto; */
+  overflow: hidden;
+  opacity: 0;
+  transition: opacity 1s ease-in;
   width: 90%;
   margin-bottom: 48px;
   font-family: "Open Sans", sans-serif;
-  display: none;
+  /* display: none; */
 }
 #form-contents {
   display: flex;
@@ -362,11 +367,9 @@ h5 {
   }
 
   #contact-form {
-    opacity: 0;
     max-width: none;
     width: 720px;
     margin: 48px auto 64px;
-    transition: opacity 1s ease-in;
   }
 
   #form-contents {
