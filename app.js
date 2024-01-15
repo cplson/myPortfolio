@@ -19,14 +19,14 @@ window.addEventListener("DOMContentLoaded", async () => {
         let email = document.getElementsByName("user_email");
         let message = document.getElementsByName("message");
 
-        emailjs.sendForm("contact_service", "contact_form", this).then(
-          function () {
-            showToastSuccess();
-          },
-          function (error) {
-            showToastFail();
-          }
-        );
+        // emailjs.sendForm("contact_service", "contact_form", this).then(
+        //   function () {
+        //     showToastSuccess();
+        //   },
+        //   function (error) {
+        //     showToastFail();
+        //   }
+        // );
 
         document.getElementById("contact-form").style.height = "0px";
         document.getElementById("contact-form").style.opacity = "0";
@@ -46,7 +46,7 @@ window.addEventListener("DOMContentLoaded", async () => {
 });
 
 const displayContactForm = () => {
-    document.getElementById("contact-form").style.height = "auto";
+  document.getElementById("contact-form").style.height = "auto";
   document.getElementById("contact-button").style.display = "none";
   loadToastSuccess();
   loadToastFail();

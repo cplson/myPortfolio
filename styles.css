@@ -141,8 +141,13 @@ h3 {
   border: none;
   margin-bottom: 80px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+  transition: all 0.5s;
 }
 
+#contact-button:hover,
+#contact-button:focus {
+  background-color: #f71735c7;
+}
 #contact-wrapper {
   width: 100%;
   display: flex;
@@ -221,6 +226,14 @@ h3 {
   border-radius: 16px;
   border: none;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.8);
+  transition: all 0.5s;
+}
+
+#submit-button:focus,
+#submit-button:hover {
+  background-color: #1f9346;
+  box-shadow: 0px 8px 4px rgba(0, 0, 0, 0.8);
+  font-size: 24px;
 }
 
 #submit-button:active {
@@ -376,6 +389,13 @@ h5 {
     border-color: #f8f1ff;
   }
 
+  #contact-button:hover,
+  #contact-button:focus {
+    font-size: 28px;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
   #contact-form {
     max-width: none;
     width: 720px;
@@ -418,6 +438,12 @@ h5 {
     padding: 8px 40px;
     margin: 48px 0px 16px;
     border-radius: 20px;
+  }
+
+  #submit-button:focus,
+  #submit-button:hover {
+    font-size: 28px;
+    border-radius: 24px;
   }
 
   footer {
