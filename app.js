@@ -22,14 +22,14 @@ window.addEventListener("DOMContentLoaded", async () => {
         let email = document.getElementsByName("user_email");
         let message = document.getElementsByName("message");
 
-        // emailjs.sendForm("contact_service", "contact_form", this).then(
-        //   function () {
-        //     showToastSuccess();
-        //   },
-        //   function (error) {
-        //     showToastFail();
-        //   }
-        // );
+        emailjs.sendForm("contact_service", "contact_form", this).then(
+          function () {
+            showToastSuccess();
+          },
+          function (error) {
+            showToastFail();
+          }
+        );
 
         showToastSuccess();
 
