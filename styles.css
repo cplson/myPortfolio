@@ -178,12 +178,12 @@ h3 {
   width: 100%;
 }
 
-.contact-input-group{
-    margin: 16px 0px;
+.contact-input-group {
+  margin: 16px 0px;
 }
 
-#message-group{
-flex-direction: column;
+#message-group {
+  flex-direction: column;
 }
 
 .contact-form-input:focus {
@@ -266,6 +266,63 @@ h5 {
 }
 
 @media (min-width: 880px) {
+  .hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transition: all 1.5s;
+  }
+
+  .hidden-right {
+    opacity: 0;
+    filter: blur(0px);
+    transform: translateX(-100%);
+    transition: all 1.5s;
+  }
+
+  .hidden-left {
+    opacity: 0;
+    filter: blur(0px);
+    transform: translateX(150%);
+    transition: all 1.5s;
+  }
+
+  .delay {
+    transition-delay: 1s;
+  }
+
+  .show {
+    opacity: 1;
+    filter: blur(0);
+  }
+
+  .show-left {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0%);
+  }
+
+  .show-right {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0%);
+  }
+
+  .features li:nth-child(2) {
+    transition-delay: 200ms;
+  }
+
+  .features li:nth-child(3) {
+    transition-delay: 400ms;
+  }
+
+  .features li:nth-child(4) {
+    transition-delay: 600ms;
+  }
+
+  .features li:nth-child(5) {
+    transition-delay: 800ms;
+  }
+
   #nav-wrapper {
     width: 100%;
   }
@@ -283,6 +340,7 @@ h5 {
     flex-direction: row-reverse;
     justify-content: space-around;
     max-width: 1660px;
+    margin-bottom: 80px;
   }
   #profile-pic {
     max-width: 340px;
@@ -294,7 +352,7 @@ h5 {
   }
 
   #divider {
-    margin: 64px 0px;
+    margin: 64px 0px 80px;
     max-width: 480px;
   }
 
@@ -352,16 +410,18 @@ h5 {
   }
 
   #contact-button {
-    margin: 40px auto 106px;
+    margin: 64px auto 106px;
     border-radius: 2px;
     font-size: 24px;
     border-color: #f8f1ff;
   }
 
   #contact-form {
+    opacity: 0;
     max-width: none;
     width: 720px;
     margin: 48px auto 64px;
+    transition: opacity 1s ease-in;
   }
 
   #form-contents {
@@ -381,7 +441,7 @@ h5 {
     flex-direction: column;
   }
 
-  .contact-form-label{
+  .contact-form-label {
     width: 35%;
   }
 
@@ -421,6 +481,10 @@ h5 {
     margin: auto;
     max-width: 960px;
     justify-content: space-around;
+  }
+  .social-link {
+    width: 32px;
+    height: 32px;
   }
 }
 

@@ -1,4 +1,5 @@
 import { toastSuccess } from "./components/Toast.js";
+import animations from "./modules/animations.js";
 
 const PUBLIC_KEY = "TNQ9m1UoziIFqxly0";
 
@@ -35,6 +36,9 @@ window.addEventListener("DOMContentLoaded", async () => {
         message[0].value = "";
       });
   };
+
+  animations();
+
   document
     .getElementById("contact-button")
     .addEventListener("click", displayContactForm);
@@ -43,6 +47,7 @@ window.addEventListener("DOMContentLoaded", async () => {
 const displayContactForm = () => {
   document.getElementById("contact-button").style.display = "none";
   document.getElementById("contact-form").style.display = "block";
+  document.getElementById("contact-form").style.opacity = "1";
   //   loadToastSuccess();
   //   loadToastFail();
 };
