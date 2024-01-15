@@ -254,6 +254,13 @@ h5 {
   margin-left: 16px;
 }
 
+.nav-social-svg:hover,
+.nav-social-svg:focus {
+  /* stroke: rgb(27, 110, 254); */
+  /* stroke:rgba(0, 0, 0, 0.8) */
+  stroke: #f71735;
+}
+
 @media (min-width: 400px) {
   #contact-form {
     max-width: 380px;
@@ -275,7 +282,6 @@ h5 {
   #nav-wrapper {
     width: 100%;
     padding: 16px;
-
   }
   #navigation {
     width: 100%;
