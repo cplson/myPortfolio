@@ -46,11 +46,11 @@ window.addEventListener("DOMContentLoaded", async () => {
 });
 
 const displayContactForm = () => {
+    document.getElementById("contact-form").style.height = "auto";
   document.getElementById("contact-button").style.display = "none";
-  document.getElementById("contact-form").style.height = "auto";
-  document.getElementById("contact-form").style.opacity = "1";
   loadToastSuccess();
   loadToastFail();
+  document.getElementById("contact-form").style.opacity = "1";
 };
 
 const loadToastSuccess = () => {
