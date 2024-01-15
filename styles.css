@@ -263,8 +263,19 @@ h5 {
   height: 24px;
   width: 24px;
 }
-.social-link {
+
+.social-link,
+.footer-social-svg {
   margin-left: 16px;
+}
+
+.footer-social-svg {
+  transition: all 0.5s;
+}
+
+.footer-social-svg:focus,
+.footer-social-svg:hover {
+  fill: #f8f1ff;
 }
 
 .nav-social-svg:hover,
@@ -522,7 +533,7 @@ h5 {
     max-width: 960px;
     justify-content: space-around;
   }
-  .social-link {
+  .footer-social-svg {
     width: 32px;
     height: 32px;
   }
