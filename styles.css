@@ -274,12 +274,15 @@ h5 {
 @media (min-width: 880px) {
   #nav-wrapper {
     width: 100%;
+    padding: 16px;
+
   }
   #navigation {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    padding: 16px;
+    padding-left: 32px;
+    padding-right: 32px;
   }
 
   #james-mobile {
