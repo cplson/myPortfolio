@@ -1,20 +1,41 @@
-const toast = {
-  boxSizing: "border-box",
-  margin: "-24px 8px 8px auto",
-  border: "solid 1px black",
-  padding: "padding: 8px 16px;",
-  display: "flex",
-  alignItems: "center",
-  color: "#f8f1ff",
-  fontSize: "16px",
+export const loadToastSuccess = () => {
+  let template = document.getElementById("toast-success-template");
+  let content = template.content.cloneNode(true);
+  let container = document.getElementById("contact-wrapper");
+  container.appendChild(content);
 };
 
-export const toastSuccess = {
-  ...toast,
-  backgroundColor: "rgba(50, 200, 50, 0.5)",
+export const loadToastFail = () => {
+  let template = document.getElementById("toast-fail-template");
+  let content = template.content.cloneNode(true);
+  let container = document.getElementById("contact-wrapper");
+  container.appendChild(content);
 };
 
-export const toastFailure = {
-  ...toast,
-  backgroundColor: "#f71735",
+export const showToastSuccess = () => {
+  let container = document.getElementById("contact-wrapper");
+  let toast;
+  if (document.getElementById("toast-fail")) {
+    toast = document.getElementById("toast-fail");
+    container.removeChild(toast);
+  }
+  toast = document.querySelector(".toast");
+  toast.style.display = "flex";
+  setTimeout(() => {
+    toast.classList.add("toast-fade");
+  }, 10);
+};
+
+export const showToastFail = () => {
+  let container = document.getElementById("contact-wrapper");
+  let toast;
+  if (document.getElementById("toast-success")) {
+    toast = document.getElementById("toast-success");
+    container.removeChild(toast);
+  }
+  toast = document.querySelector(".toast");
+  toast.style.display = "flex";
+  setTimeout(() => {
+    toast.classList.add("toast-fade");
+  }, 10);
 };

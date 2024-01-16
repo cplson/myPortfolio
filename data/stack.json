@@ -1,0 +1,13 @@
+[
+  { "html": "./data/images/stackImages/HTML5.svg.png" },
+  { "css": "./data/stackImages/CSS3.svg" },
+  { "javascript": "./data/stackImages/JS.svg" },
+  { "reactjs": "./data/stackImages/React.svg" },
+  { "typescript": "/data/stackImages/Typescript.svg" },
+  { "postgres": "/data/stackImages/Postgresql.svg" },
+  { "nextjs": "/data/stackImages/nextjs.svg" },
+  { "nodejs": "/data/stackImages/Node.js.svg" },
+  { "express": "/data/stackImages/expressjs.svg" },
+  { "tailwind": "/data/stackImages/Tailwind.svg" },
+  { "cpp": "/data/stackImages/Cpp.svg" }
+]

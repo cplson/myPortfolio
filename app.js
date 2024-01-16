@@ -1,4 +1,11 @@
 import animations from "./modules/animations.js";
+import StackItem from "./components/StackItem.js";
+import {
+  loadToastFail,
+  loadToastSuccess,
+  showToastFail,
+  showToastSuccess,
+} from "./components/Toast.js";
 
 const PUBLIC_KEY = "TNQ9m1UoziIFqxly0";
 
@@ -40,6 +47,7 @@ window.addEventListener("DOMContentLoaded", async () => {
   };
 
   animations();
+  renderStack();
 
   document
     .getElementById("contact-button")
@@ -59,44 +67,48 @@ const displayContactForm = () => {
   }
 };
 
-const loadToastSuccess = () => {
-  let template = document.getElementById("toast-success-template");
-  let content = template.content.cloneNode(true);
-  let container = document.getElementById("contact-wrapper");
-  container.appendChild(content);
+const renderStack = () => {
+  let list = new StackItem(1);
+  console.log(list);
 };
+// const loadToastSuccess = () => {
+//   let template = document.getElementById("toast-success-template");
+//   let content = template.content.cloneNode(true);
+//   let container = document.getElementById("contact-wrapper");
+//   container.appendChild(content);
+// };
 
-const loadToastFail = () => {
-  let template = document.getElementById("toast-fail-template");
-  let content = template.content.cloneNode(true);
-  let container = document.getElementById("contact-wrapper");
-  container.appendChild(content);
-};
+// const loadToastFail = () => {
+//   let template = document.getElementById("toast-fail-template");
+//   let content = template.content.cloneNode(true);
+//   let container = document.getElementById("contact-wrapper");
+//   container.appendChild(content);
+// };
 
-const showToastSuccess = () => {
-  let container = document.getElementById("contact-wrapper");
-  let toast;
-  if (document.getElementById("toast-fail")) {
-    toast = document.getElementById("toast-fail");
-    container.removeChild(toast);
-  }
-  toast = document.querySelector(".toast");
-  toast.style.display = "flex";
-  setTimeout(() => {
-    toast.classList.add("toast-fade");
-  }, 10);
-};
+// const showToastSuccess = () => {
+//   let container = document.getElementById("contact-wrapper");
+//   let toast;
+//   if (document.getElementById("toast-fail")) {
+//     toast = document.getElementById("toast-fail");
+//     container.removeChild(toast);
+//   }
+//   toast = document.querySelector(".toast");
+//   toast.style.display = "flex";
+//   setTimeout(() => {
+//     toast.classList.add("toast-fade");
+//   }, 10);
+// };
 
-const showToastFail = () => {
-  let container = document.getElementById("contact-wrapper");
-  let toast;
-  if (document.getElementById("toast-success")) {
-    toast = document.getElementById("toast-success");
-    container.removeChild(toast);
-  }
-  toast = document.querySelector(".toast");
-  toast.style.display = "flex";
-  setTimeout(() => {
-    toast.classList.add("toast-fade");
-  }, 10);
-};
+// const showToastFail = () => {
+//   let container = document.getElementById("contact-wrapper");
+//   let toast;
+//   if (document.getElementById("toast-success")) {
+//     toast = document.getElementById("toast-success");
+//     container.removeChild(toast);
+//   }
+//   toast = document.querySelector(".toast");
+//   toast.style.display = "flex";
+//   setTimeout(() => {
+//     toast.classList.add("toast-fade");
+//   }, 10);
+// };

@@ -465,11 +465,11 @@ h5 {
   h5 {
     font-size: 24px;
   }
-  /* .hidden {
+  .hidden {
     opacity: 0;
     filter: blur(3px);
     transition: opacity 1s;
-  } */
+  }
 
   .hidden-right {
     opacity: 0;
