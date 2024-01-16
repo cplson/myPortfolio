@@ -64,7 +64,6 @@ const loadToastSuccess = () => {
   let content = template.content.cloneNode(true);
   let container = document.getElementById("contact-wrapper");
   container.appendChild(content);
-  console.log(container);
 };
 
 const loadToastFail = () => {
@@ -90,12 +89,14 @@ const showToastSuccess = () => {
 
 const showToastFail = () => {
   let container = document.getElementById("contact-wrapper");
-  let toast = document.getElementById("toast-success");
-  container.removeChild(toast);
-  toast = document.getElementById("toast-fail");
-  toast.style.right = "8px";
-  toast.addEventListener("transitionend", (event) => {
-    toast = document.querySelector("#toast-fail");
-    toast.style.opacity = "0";
-  });
+  let toast;
+  if (document.getElementById("toast-success")) {
+    toast = document.getElementById("toast-success");
+    container.removeChild(toast);
+  }
+  toast = document.querySelector(".toast");
+  toast.style.display = "flex";
+  setTimeout(() => {
+    toast.classList.add("toast-fade");
+  }, 10);
 };
