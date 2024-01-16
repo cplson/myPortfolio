@@ -1,4 +1,3 @@
-import { toastSuccess } from "./components/Toast.js";
 import animations from "./modules/animations.js";
 
 const PUBLIC_KEY = "TNQ9m1UoziIFqxly0";
@@ -11,6 +10,12 @@ window.addEventListener("DOMContentLoaded", async () => {
       .getElementById("contact-form")
       .addEventListener("submit", function (event) {
         event.preventDefault();
+
+        let container = document.getElementById("contact-wrapper");
+        let toastToRemove = document.querySelectorAll(".toast");
+        if (toastToRemove.length > 0) {
+          container.removeChild(toastToRemove[0]);
+        }
 
         loadToastSuccess();
         loadToastFail();
@@ -30,8 +35,6 @@ window.addEventListener("DOMContentLoaded", async () => {
             showToastFail();
           }
         );
-
-        showToastSuccess();
 
         document.getElementById("contact-form").style.height = "0px";
         document.getElementById("contact-form").style.opacity = "0";
@@ -78,12 +81,10 @@ const showToastSuccess = () => {
   container.removeChild(toast);
   toast = document.getElementById("toast-success");
   toast.style.right = "8px";
-  setTimeout(() => {
+  toast.addEventListener("transitionend", (event) => {
+    toast = document.querySelector("#toast-success");
     toast.style.opacity = "0";
-    setTimeout(() => {
-      container.removeChild(toast);
-    }, 1000);
-  }, 3000);
+  });
 };
 
 const showToastFail = () => {
@@ -92,10 +93,8 @@ const showToastFail = () => {
   container.removeChild(toast);
   toast = document.getElementById("toast-fail");
   toast.style.right = "8px";
-  setTimeout(() => {
+  toast.addEventListener("transitionend", (event) => {
+    toast = document.querySelector("#toast-fail");
     toast.style.opacity = "0";
-    setTimeout(() => {
-      container.removeChild(toast);
-    }, 1000);
-  }, 3000);
+  });
 };

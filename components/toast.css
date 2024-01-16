@@ -1,16 +1,16 @@
 #toast-success {
   background-color: rgba(50, 200, 50, 0.5);
-  transition: right 1.25s ease-in-out, opacity 1s ease-out;
+  transition: right 1.25s ease-in-out, opacity 1s ease-out 3.5s;
 }
 
 #toast-fail {
   background-color: rgba(247, 23, 53, 0.65);
-  transition: right 1.25s ease-in-out, opacity 1s ease-out;
+  transition: right 1.25s ease-in-out, opacity 1s ease-out 3.5s;
 }
 
 .toast {
   position: absolute;
-  right: -100%;
+  right: -50%;
   bottom: 8px;
   box-sizing: border-box;
   border: solid 1px black;
