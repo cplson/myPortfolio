@@ -1,27 +1,33 @@
 #toast-success {
   background-color: rgba(50, 200, 50, 0.5);
-  transition: right 1.25s ease-in-out, opacity 1s ease-out 3.5s;
 }
 
 #toast-fail {
   background-color: rgba(247, 23, 53, 0.65);
-  transition: right 1.25s ease-in-out, opacity 1s ease-out 3.5s;
 }
 
 .toast {
   position: absolute;
-  right: -50%;
+  right: 8px;
   bottom: 8px;
+  display: none;
   box-sizing: border-box;
   border: solid 1px black;
   padding: 8px 12px;
-  display: flex;
-  justify-content: space-around;
   align-items: center;
   text-wrap: nowrap;
-  background-color: rgba(50, 200, 50, 0.5);
   color: #f8f1ff;
   font-size: 16px;
+  opacity: 1;
+}
+
+.show-toast {
+  display: flex;
+  justify-content: space-around;
+}
+.toast-fade {
+  opacity: 0;
+  transition: opacity 1s ease-out 1.75s;
 }
 
 .toast-message {

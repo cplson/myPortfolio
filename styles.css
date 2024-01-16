@@ -161,7 +161,7 @@ h3 {
   /* height: auto; */
   overflow: hidden;
   opacity: 0;
-  transition: opacity 1s ease-in;
+  /* transition: opacity 1s ease-in; */
   width: 90%;
   margin-bottom: 48px;
   font-family: "Open Sans", sans-serif;
@@ -465,11 +465,11 @@ h5 {
   h5 {
     font-size: 24px;
   }
-  .hidden {
+  /* .hidden {
     opacity: 0;
     filter: blur(3px);
-    transition: all 1s;
-  }
+    transition: opacity 1s;
+  } */
 
   .hidden-right {
     opacity: 0;
