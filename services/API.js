@@ -1,6 +1,6 @@
 export const fetchStack = {
   url: "./data/stack.json",
-  fetchStack: async () => {
+  getStack: async () => {
     const result = await fetch(fetchStack.url);
     return await result.json();
   },

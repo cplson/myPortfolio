@@ -1,11 +1,11 @@
 import animations from "./modules/animations.js";
-import StackItem from "./components/StackItem.js";
 import {
   loadToastFail,
   loadToastSuccess,
   showToastFail,
   showToastSuccess,
 } from "./components/Toast.js";
+import { fetchStack } from "./services/API.js";
 
 const PUBLIC_KEY = "TNQ9m1UoziIFqxly0";
 
@@ -67,48 +67,17 @@ const displayContactForm = () => {
   }
 };
 
-const renderStack = () => {
-  let list = new StackItem(1);
-  console.log(list);
+const renderStack = async () => {
+  const stack = await fetchStack.getStack();
+  for (let i = 0; i < stack.length; i++) {
+    const template = document.getElementById("stack-item-template");
+    let container = document.getElementById("stack-list");
+    let content = template.content.cloneNode(true);
+    container.appendChild(content);
+    content = document.getElementsByClassName("stack-item-wrapper");
+    // console.log(content[i]);
+    content[
+      i
+    ].innerHTML = `<img class="stack-item-img" src="${stack[i].src}" />`;
+  }
 };
-// const loadToastSuccess = () => {
-//   let template = document.getElementById("toast-success-template");
-//   let content = template.content.cloneNode(true);
-//   let container = document.getElementById("contact-wrapper");
-//   container.appendChild(content);
-// };
-
-// const loadToastFail = () => {
-//   let template = document.getElementById("toast-fail-template");
-//   let content = template.content.cloneNode(true);
-//   let container = document.getElementById("contact-wrapper");
-//   container.appendChild(content);
-// };
-
-// const showToastSuccess = () => {
-//   let container = document.getElementById("contact-wrapper");
-//   let toast;
-//   if (document.getElementById("toast-fail")) {
-//     toast = document.getElementById("toast-fail");
-//     container.removeChild(toast);
-//   }
-//   toast = document.querySelector(".toast");
-//   toast.style.display = "flex";
-//   setTimeout(() => {
-//     toast.classList.add("toast-fade");
-//   }, 10);
-// };
-
-// const showToastFail = () => {
-//   let container = document.getElementById("contact-wrapper");
-//   let toast;
-//   if (document.getElementById("toast-success")) {
-//     toast = document.getElementById("toast-success");
-//     container.removeChild(toast);
-//   }
-//   toast = document.querySelector(".toast");
-//   toast.style.display = "flex";
-//   setTimeout(() => {
-//     toast.classList.add("toast-fade");
-//   }, 10);
-// };

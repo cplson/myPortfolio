@@ -1,13 +1,13 @@
 [
-  { "html": "./data/images/stackImages/HTML5.svg.png" },
-  { "css": "./data/stackImages/CSS3.svg" },
-  { "javascript": "./data/stackImages/JS.svg" },
-  { "reactjs": "./data/stackImages/React.svg" },
-  { "typescript": "/data/stackImages/Typescript.svg" },
-  { "postgres": "/data/stackImages/Postgresql.svg" },
-  { "nextjs": "/data/stackImages/nextjs.svg" },
-  { "nodejs": "/data/stackImages/Node.js.svg" },
-  { "express": "/data/stackImages/expressjs.svg" },
-  { "tailwind": "/data/stackImages/Tailwind.svg" },
-  { "cpp": "/data/stackImages/Cpp.svg" }
+  { "src": "./data/stackImages/HTML5.svg" },
+  { "src": "./data/stackImages/CSS3.svg" },
+  { "src": "./data/stackImages/JS.svg" },
+  { "src": "./data/stackImages/React.svg" },
+  { "src": "/data/stackImages/Typescript.svg" },
+  { "src": "/data/stackImages/Postgresql.svg" },
+  { "src": "/data/stackImages/nextjs.svg" },
+  { "src": "/data/stackImages/Node.js.svg" },
+  { "src": "/data/stackImages/expressjs.svg" },
+  { "src": "/data/stackImages/Tailwind.svg" },
+  { "src": "/data/stackImages/Cpp.svg" }
 ]
