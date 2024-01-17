@@ -89,17 +89,20 @@ h5 {
 
 #stack-list-wrapper {
   margin: 32px auto 64px;
-  width: 80%;
+  max-width: 660px;
+  width: 90%;
+  /* max-width: 660px; */
 }
 
 #stack-list {
-  max-width: 720px;
   margin: auto;
-  padding: 0;
+  /* padding: -4px; */
   list-style: none;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  background-color: rgba(240, 240, 240, 1);
+  border-radius: 4px;
 
   /* background-color: #020202; */
   /* display: grid; */
@@ -360,6 +363,10 @@ h5 {
 }
 
 @media (min-width: 740px) {
+#stack-list-wrapper{
+  max-width: 720px;
+}
+
   .stack-item-wrapper {
     width: 64px;
     height: 64px;
@@ -401,6 +408,10 @@ h5 {
   #divider {
     margin: 64px 0px 80px;
     max-width: 480px;
+  }
+
+  #stack-list{
+    padding: 32px;
   }
 
   .stack-item-wrapper {
