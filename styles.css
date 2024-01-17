@@ -87,6 +87,53 @@ h5 {
   border: none;
 }
 
+#stack-list-wrapper {
+  margin: 32px auto 64px;
+  width: 80%;
+}
+
+#stack-list {
+  max-width: 720px;
+  margin: auto;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  /* background-color: #020202; */
+  /* display: grid; */
+  /* justify-items: center; */
+  /* align-items: center; */
+  /* gap: 16px; */
+  /* grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); */
+}
+
+.stack-item-wrapper {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  margin: 16px;
+}
+
+.stack-item {
+  /* width: 100%;
+  height: 100%; */
+  /* position: absolute; */
+  /* right: 100%; */
+  /* opacity: 0; */
+  /* transition: opacity 1s ease-in-out; */
+}
+
+.stack-item-img {
+  /* transition: opacity 1s ease-in-out; */
+  /* opacity: 0; */
+  /* position: absolute; */
+  /* right: 0%; */
+  /* transform: translateX(0); */
+  /* opacity: 0; */
+}
+
 h2 {
   font-weight: 400;
   margin-bottom: 16px;
@@ -304,6 +351,22 @@ h5 {
   }
 }
 
+@media (min-width: 540px) {
+  .stack-item-wrapper {
+    width: 48px;
+    height: 48px;
+    margin: 20px;
+  }
+}
+
+@media (min-width: 740px) {
+  .stack-item-wrapper {
+    width: 64px;
+    height: 64px;
+    margin: 24px;
+  }
+}
+
 @media (min-width: 880px) {
   #nav-wrapper {
     width: 100%;
@@ -338,6 +401,12 @@ h5 {
   #divider {
     margin: 64px 0px 80px;
     max-width: 480px;
+  }
+
+  .stack-item-wrapper {
+    width: 80px;
+    height: 80px;
+    margin: 24px;
   }
 
   #project-section-wrapper {
@@ -520,6 +589,37 @@ h5 {
 
   .features li:nth-child(5) {
     transition-delay: 800ms;
+  }
+
+  #stack-list div:nth-child(1) {
+    transition-delay: 100ms;
+  }
+  #stack-list div:nth-child(2) {
+    transition-delay: 200ms;
+  }
+  #stack-list div:nth-child(3) {
+    transition-delay: 300ms;
+  }
+  #stack-list div:nth-child(4) {
+    transition-delay: 400ms;
+  }
+  #stack-list div:nth-child(5) {
+    transition-delay: 500ms;
+  }
+  #stack-list div:nth-child(6) {
+    transition-delay: 600ms;
+  }
+  #stack-list div:nth-child(7) {
+    transition-delay: 700ms;
+  }
+  #stack-list div:nth-child(8) {
+    transition-delay: 800ms;
+  }
+  #stack-list div:nth-child(9) {
+    transition-delay: 900ms;
+  }
+  #stack-list div:nth-child(10) {
+    transition-delay: 1000ms;
   }
 }
 

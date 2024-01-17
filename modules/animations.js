@@ -29,7 +29,6 @@ const animations = async () => {
     });
   });
 
-  // TODO: make sure to add the hidden class to the proper elements
   const hiddenElements = document.querySelectorAll(".hidden");
   const hiddenRightElements = document.querySelectorAll(".hidden-right");
   const hiddenLeftElements = document.querySelectorAll(".hidden-left");
