@@ -91,10 +91,5 @@ const renderStack = async () => {
       });
     });
     hiddenElements.forEach((el) => observer.observe(el));
-    // setTimeout(() => {
-    //   content[i].classList.add("show");
-    // }, 1000)
-    // content[i].classList.add('show-right');
-    // content[i].style.opacity = '1';
   }
 };

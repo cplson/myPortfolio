@@ -1,12 +1,12 @@
 [
   { "src": "./data/stackImages/JS.svg" },
-  { "src": "/data/stackImages/Typescript.svg" },
+  { "src": "./data/stackImages/Typescript.svg" },
   { "src": "./data/stackImages/React.svg" },
-  { "src": "/data/stackImages/nextjs.svg" },
-  { "src": "/data/stackImages/Node.js.svg" },
-  { "src": "/data/stackImages/Postgresql.svg" },
-  { "src": "/data/stackImages/expressjs.svg" },
+  { "src": "./data/stackImages/nextjs.svg" },
+  { "src": "./data/stackImages/Node.js.svg" },
+  { "src": "./data/stackImages/Postgresql.svg" },
+  { "src": "./data/stackImages/expressjs.svg" },
   { "src": "./data/stackImages/CSS3.svg" },
-  { "src": "/data/stackImages/Tailwind.svg" },
+  { "src": "./data/stackImages/Tailwind.svg" },
   { "src": "./data/stackImages/HTML5.svg" }
 ]
