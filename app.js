@@ -6,6 +6,7 @@ import {
   showToastSuccess,
 } from "./components/Toast.js";
 import renderStack from "./components/Stack.js";
+import renderTestimonials from "./components/Testimonial.js";
 
 const PUBLIC_KEY = "TNQ9m1UoziIFqxly0";
 
@@ -48,6 +49,7 @@ window.addEventListener("DOMContentLoaded", async () => {
 
   animations();
   renderStack();
+  renderTestimonials();
 
   document
     .getElementById("contact-button")
