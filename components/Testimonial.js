@@ -33,11 +33,15 @@ const renderTestimonials = async () => {
     indicators[0].classList.add("active");
   }
   leftArrow();
+  rightArrow();
 };
 
 const leftArrow = () => {
   document.getElementById("testimonial-left").addEventListener("click", () => {
     let testimonialList = document.getElementsByClassName("testimonial-card");
+    let indicatorList = document.getElementsByClassName(
+      "testimonial-indicator"
+    );
     let index;
     for (let i = 0; i < testimonialList.length; i++) {
       if (testimonialList[i].classList.contains("show")) {
@@ -47,28 +51,50 @@ const leftArrow = () => {
     }
     testimonialList[index].classList.remove("show");
     testimonialList[index].classList.add("hide");
+    indicatorList[index].classList.remove("active");
+    indicatorList[index].classList.add("inactive");
     if (index != 0) {
       testimonialList[index - 1].classList.add("show");
       testimonialList[index - 1].classList.remove("hide");
+      indicatorList[index - 1].classList.add("active");
+      indicatorList[index - 1].classList.remove("inactive");
     } else {
       testimonialList[testimonialList.length - 1].classList.add("show");
       testimonialList[testimonialList.length - 1].classList.remove("hide");
+      indicatorList[indicatorList.length - 1].classList.add("active");
+      indicatorList[indicatorList.length - 1].classList.remove("inactive");
     }
-    updateIndicatorsLeft(index);
   });
 };
 
-const updateIndicatorsLeft = (index) => {
-  let indicatorList = document.getElementsByClassName("testimonial-indicator");
-  indicatorList[index].classList.remove("active");
-  indicatorList[index].classList.add("inactive");
-  if (index != 0) {
-    indicatorList[index - 1].classList.add("active");
-    indicatorList[index - 1].classList.remove("inactive");
-  } else {
-    indicatorList[indicatorList.length - 1].classList.add("active");
-    indicatorList[indicatorList.length - 1].classList.remove("inactive");
-  }
+const rightArrow = () => {
+  document.getElementById("testimonial-right").addEventListener("click", () => {
+    let testimonialList = document.getElementsByClassName("testimonial-card");
+    let indicatorList = document.getElementsByClassName(
+      "testimonial-indicator"
+    );
+    let index;
+    for (let i = 0; i < testimonialList.length; i++) {
+      if (testimonialList[i].classList.contains("show")) {
+        index = i;
+      }
+    }
+    testimonialList[index].classList.remove("show");
+    testimonialList[index].classList.add("hide");
+    indicatorList[index].classList.remove("active");
+    indicatorList[index].classList.add("inactive");
+    if (index != testimonialList.length - 1) {
+      testimonialList[index + 1].classList.add("show");
+      testimonialList[index + 1].classList.remove("hide");
+      indicatorList[index + 1].classList.add("active");
+      indicatorList[index + 1].classList.remove("inactive");
+    } else {
+      testimonialList[0].classList.add("show");
+      testimonialList[0].classList.remove("hide");
+      indicatorList[0].classList.add("active");
+      indicatorList[0].classList.remove("inactive");
+    }
+  });
 };
 
 export default renderTestimonials;
