@@ -14,6 +14,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
+      href="https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
       href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;500;700&family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap"
       rel="stylesheet"
     />
@@ -173,6 +179,19 @@
         </div>
       </div>
 
+      <div id="testimonial-group-wrapper">
+        <div id="testimonial-wrapper">
+          <div id="testimonial-group">
+
+          </div>
+          <div id="testimonial-button-group">
+            <button class="testimonial-button" id="testimonial-left">&#8249;</button>
+            <button class="testimonial-button" id="testimonial-right">&#8250;</button>
+          </div>
+        </div>
+        <div id="testimonial-indicator-group"></div>
+      </div>
+
       <div id="contact-wrapper">
         <button id="contact-button">Contact Me</button>
 
@@ -211,7 +230,6 @@
           </div>
         </form>
       </div>
-      <div id="testimonial-wrapper"></div>
 
       <div id="footer-wrapper">
         <footer id="footer">
@@ -281,12 +299,22 @@
       </div>
     </template>
     <template id="testimonial-template">
-      <div class="testimonial">
-        <img class="testimonial-img" href="" alt="" />
-        <h6 class="testimonial-name"></h6>
-        <p class="testimonial-relation"></p>
-        <p class="testimony"></p>
+      <div class="testimonial-card">
+        <div class="testimonial">
+          <img class="testimonial-img" href="" alt="" />
+          <h6 class="testimonial-name"></h6>
+          <p class="testimonial-relation"></p>
+          <div class="quote-wrapper">
+            <div class="testimony-wrapper">
+              <p class="quote">"</p>
+              <p class="testimony"></p>
+            </div>
+          </div>
+        </div>
       </div>
+    </template>
+    <template id="testimonial-indicator-template">
+      <div class="testimonial-indicator inactive"></div>
     </template>
   </body>
 </html>
