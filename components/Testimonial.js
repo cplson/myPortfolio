@@ -24,13 +24,50 @@ const renderTestimonials = async () => {
     container.appendChild(content);
   }
   if (testimonialList.length > 0) {
-      let testimonial = document.getElementsByClassName("testimonial-card");
-      activeTestimonial = testimonial[0];
+    let testimonial = document.getElementsByClassName("testimonial-card");
+    activeTestimonial = testimonial[0];
     testimonial[0].classList.remove("hide");
     testimonial[0].classList.add("show");
     let indicators = document.getElementsByClassName("testimonial-indicator");
     indicators[0].classList.remove("inactive");
     indicators[0].classList.add("active");
+  }
+  leftArrow();
+};
+
+const leftArrow = () => {
+  document.getElementById("testimonial-left").addEventListener("click", () => {
+    let testimonialList = document.getElementsByClassName("testimonial-card");
+    let index;
+    for (let i = 0; i < testimonialList.length; i++) {
+      if (testimonialList[i].classList.contains("show")) {
+        index = i;
+        console.log(index);
+      }
+    }
+    testimonialList[index].classList.remove("show");
+    testimonialList[index].classList.add("hide");
+    if (index != 0) {
+      testimonialList[index - 1].classList.add("show");
+      testimonialList[index - 1].classList.remove("hide");
+    } else {
+      testimonialList[testimonialList.length - 1].classList.add("show");
+      testimonialList[testimonialList.length - 1].classList.remove("hide");
+    }
+    updateIndicatorsLeft(index);
+  });
+};
+
+const updateIndicatorsLeft = (index) => {
+  let indicatorList = document.getElementsByClassName("testimonial-indicator");
+  indicatorList[index].classList.remove("active");
+  indicatorList[index].classList.add("inactive");
+  if (index != 0) {
+    indicatorList[index - 1].classList.add("active");
+    indicatorList[index - 1].classList.remove("inactive");
+  } else {
+    indicatorList[indicatorList.length - 1].classList.add("active");
+    indicatorList[indicatorList.length - 1].classList.remove("inactive");
   }
 };
 
