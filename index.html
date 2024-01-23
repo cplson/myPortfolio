@@ -8,7 +8,15 @@
     <!-- STYLES -->
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="./components/toast.css" />
+    <link rel="stylesheet" href="./components/testimonial.css" />
+
     <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -109,8 +117,8 @@
           solving, it doesn't matter much where in the stack. But I have noticed
           I find exceptional fulfillment when working with
           <span class="highlight-text">API's</span>, connecting systems and
-          enabling them to communicate and unlock <i>powerful</i> and
-          <i>dynamic</i> possibilities is a fascinating process to me.
+          enabling them to communicate, unlocking <i>powerful</i> and
+          <i>dynamic</i> possibilities. It's a fascinating process to me.
         </p>
       </div>
       <hr id="divider" />
@@ -185,6 +193,21 @@
         </div>
       </div>
 
+      <div id="testimonial-group-wrapper">
+        <div id="testimonial-wrapper">
+          <div id="testimonial-group"></div>
+          <div id="testimonial-button-group">
+            <button class="testimonial-button" id="testimonial-left">
+              &#8249;
+            </button>
+            <button class="testimonial-button" id="testimonial-right">
+              &#8250;
+            </button>
+          </div>
+        </div>
+        <div id="testimonial-indicator-group"></div>
+      </div>
+
       <div id="contact-wrapper">
         <button id="contact-button">Contact Me</button>
 
@@ -223,7 +246,6 @@
           </div>
         </form>
       </div>
-      <div id="testimonial-wrapper"></div>
 
       <div id="footer-wrapper">
         <footer id="footer">
@@ -292,13 +314,23 @@
         <li class="stack-item"></li>
       </div>
     </template>
-    <template>
-      <div class="testimonial">
-        <img class="testimonial-img" href="" alt="" />
-        <h6 class="testimonial-name"></h6>
-        <p class="testimonial-relation"></p>
-        <p class="testimony"></p>
+    <template id="testimonial-template">
+      <div class="testimonial-card">
+        <div class="testimonial">
+          <img class="testimonial-img" href="" alt="" />
+          <a class="testimonial-link"><h6 class="testimonial-name"></h6></a>
+          <p class="testimonial-relation"></p>
+          <div class="quote-wrapper">
+            <div class="testimony-wrapper">
+              <p class="quote">"</p>
+              <p class="testimony"></p>
+            </div>
+          </div>
+        </div>
       </div>
+    </template>
+    <template id="testimonial-indicator-template">
+      <div class="testimonial-indicator inactive"></div>
     </template>
   </body>
 </html>

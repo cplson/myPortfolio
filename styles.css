@@ -60,6 +60,9 @@ h5 {
 #intro-p {
   font-size: 24px;
   margin-bottom: 24px;
+  hyphens: auto;
+  text-align: justify;
+  line-height: 1.25em;
 }
 
 #profile-pic {
@@ -71,8 +74,8 @@ h5 {
 }
 
 #james-mobile {
-  margin-top: 32px;
-  margin-bottom: 16px;
+  margin-top: 96px;
+  margin-bottom: 48px;
 }
 
 .highlight-text {
@@ -175,7 +178,7 @@ h3 {
   background-color: #f71735;
   color: #f8f1ff;
   font-size: 16px;
-  border-radius: 8px;
+  border-radius: 2px;
   border: none;
   margin-bottom: 80px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
@@ -262,7 +265,7 @@ h3 {
   margin-bottom: 16px;
   background-color: rgba(50, 220, 50, 0.8);
   color: #f8f1ff;
-  border-radius: 16px;
+  border-radius: 2px;
   border: none;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.8);
   transition: all 0.5s;
@@ -518,13 +521,12 @@ h5 {
     font-size: 24px;
     padding: 8px 40px;
     margin: 48px 0px 16px;
-    border-radius: 20px;
+    border-radius: 4px;
   }
 
   #submit-button:focus,
   #submit-button:hover {
     font-size: 28px;
-    border-radius: 24px;
   }
 
   footer {
