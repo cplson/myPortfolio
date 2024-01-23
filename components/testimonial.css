@@ -56,6 +56,8 @@
 .testimonial-link:hover,
 .testimonial-link:focus {
   text-decoration: underline;
+  text-decoration-thickness: 0.2em;
+  text-underline-offset: 0.25em;
 }
 
 .testimonial-relation {
