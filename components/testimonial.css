@@ -48,6 +48,16 @@
   font-size: 16px;
 }
 
+.testimonial-link {
+  text-decoration: none;
+  color: #f71735cd;
+}
+
+.testimonial-link:hover,
+.testimonial-link:focus {
+  text-decoration: underline;
+}
+
 .testimonial-relation {
   opacity: 0.65;
 }

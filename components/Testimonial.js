@@ -17,6 +17,8 @@ const renderTestimonials = async () => {
       testimonialList[i].relation;
     document.getElementsByClassName("testimony")[i].innerHTML =
       testimonialList[i].testimony;
+    document.getElementsByClassName("testimonial-link")[i].href =
+      testimonialList[i].linkedin;
 
     template = document.getElementById("testimonial-indicator-template");
     container = document.getElementById("testimonial-indicator-group");
